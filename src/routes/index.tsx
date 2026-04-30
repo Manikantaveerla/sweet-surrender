@@ -1,26 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Experience } from "@/components/birthday/Experience";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "A Birthday Surprise — Made With Love" },
+      { name: "description", content: "An interactive, cinematic birthday gift — letters, cakes, memories, and one very big surprise." },
+      { property: "og:title", content: "A Birthday Surprise — Made With Love" },
+      { property: "og:description", content: "A handcrafted, romantic, magical birthday experience." },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return <Experience />;
 }
