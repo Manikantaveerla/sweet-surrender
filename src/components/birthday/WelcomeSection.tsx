@@ -83,7 +83,7 @@ export function WelcomeSection({ onUnlock }: { onUnlock: () => void }) {
               alt={`A portrait for ${config.name}`}
               width={1024}
               height={1280}
-              className="h-[60vh] sm:h-[68vh] lg:h-[78vh] w-full object-cover"
+              className="h-[60vh] sm:h-[68vh] lg:h-[78vh] w-full object-cover object-[35%_top]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-rose/40 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 right-5 flex items-center gap-2 glass rounded-2xl px-4 py-3 shadow-soft">
