@@ -2,11 +2,11 @@
 
 export const config = {
   // Her name (replace with hers)
-  name: "My Love",
-  shortName: "Beautiful",
+  name: "Viju Lu",
+  shortName: "Viju",
 
   // 4-digit passcode (e.g. her birthday DDMM)
-  passcode: "0000",
+  passcode: "1614",
 
   // Welcome screen
   welcomeHeading: "A surprise made only for you",
