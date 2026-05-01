@@ -23,38 +23,76 @@ export function InteractiveCake({
       type="button"
       onClick={handleCut}
       aria-label="Cut the cake"
-      className="group relative outline-none"
+      className="group relative outline-none px-6"
     >
-      {/* Glow base */}
+      {/* Multi-layer glow base */}
       <div
         className={`absolute inset-0 rounded-full blur-3xl transition-all duration-700 ${
-          cut ? "scale-125 opacity-90" : "scale-90 opacity-50 group-hover:opacity-80"
+          cut ? "scale-150 opacity-100" : "scale-90 opacity-70 group-hover:opacity-90 group-hover:scale-100"
         }`}
-        style={{ background: "radial-gradient(circle, oklch(0.88 0.1 50 / 0.7), transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, oklch(0.82 0.18 50 / 0.85), transparent 65%)" }}
+        aria-hidden
+      />
+      <div
+        className={`absolute inset-0 rounded-full blur-2xl transition-all duration-700 ${
+          cut ? "scale-125 opacity-90" : "scale-75 opacity-60 group-hover:opacity-80"
+        }`}
+        style={{ background: "radial-gradient(circle, oklch(0.88 0.16 25 / 0.6), transparent 60%)" }}
         aria-hidden
       />
 
-      {/* Candle flame layer */}
+      {/* Candle flame layer with halos */}
       {!cut && (
-        <div className="pointer-events-none absolute inset-x-0 top-[6%] flex justify-center gap-2 z-10">
+        <div className="pointer-events-none absolute inset-x-0 top-[5%] flex justify-center gap-2 sm:gap-3 z-10">
           {Array.from({ length: variant === 1 ? 6 : 7 }).map((_, i) => (
-            <span
-              key={i}
-              className="block h-3 w-1.5 rounded-full bg-yellow-200 animate-flicker"
-              style={{
-                boxShadow:
-                  "0 0 12px oklch(0.95 0.15 80 / 0.95), 0 0 24px oklch(0.85 0.18 60 / 0.7)",
-                animationDelay: `${i * 0.15}s`,
-              }}
-            />
+            <span key={i} className="relative">
+              <span
+                className="block h-4 w-2 rounded-full bg-yellow-100 animate-flicker"
+                style={{
+                  boxShadow:
+                    "0 0 16px oklch(0.96 0.18 80 / 1), 0 0 32px oklch(0.88 0.2 60 / 0.9), 0 0 50px oklch(0.78 0.18 30 / 0.7)",
+                  animationDelay: `${i * 0.15}s`,
+                }}
+              />
+              <span
+                aria-hidden
+                className="absolute -inset-2 rounded-full blur-md animate-flicker"
+                style={{
+                  background: "radial-gradient(circle, oklch(0.92 0.18 70 / 0.6), transparent 70%)",
+                  animationDelay: `${i * 0.18}s`,
+                }}
+              />
+            </span>
           ))}
+        </div>
+      )}
+
+      {/* Sparkle burst on cut */}
+      {cut && (
+        <div aria-hidden className="pointer-events-none absolute inset-0 z-20">
+          {Array.from({ length: 12 }).map((_, i) => {
+            const angle = (i / 12) * 360;
+            return (
+              <span
+                key={i}
+                className="absolute top-1/2 left-1/2 animate-sparkle-burst"
+                style={{
+                  transform: `rotate(${angle}deg) translateX(120px)`,
+                  animationDelay: `${i * 0.04}s`,
+                }}
+              >
+                <span className="block h-2 w-2 rounded-full bg-accent"
+                  style={{ boxShadow: "0 0 14px oklch(0.92 0.18 75 / 1), 0 0 28px oklch(0.85 0.2 50 / 0.8)" }} />
+              </span>
+            );
+          })}
         </div>
       )}
 
       {/* Cake image */}
       <div
         className={`relative transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          cut ? "scale-105 -rotate-1" : "group-hover:scale-[1.03]"
+          cut ? "scale-110 -rotate-2" : "group-hover:scale-[1.04] animate-float-soft"
         }`}
       >
         <img
@@ -62,23 +100,12 @@ export function InteractiveCake({
           alt="Birthday cake"
           width={1024}
           height={1024}
-          className="h-[55vh] sm:h-[62vh] w-auto mx-auto drop-shadow-[0_30px_50px_oklch(0.55_0.16_15/0.35)]"
+          className="h-[55vh] sm:h-[62vh] w-auto mx-auto drop-shadow-[0_40px_60px_oklch(0.42_0.19_12/0.55)]"
         />
-        {/* Cut slice overlay */}
-        {cut && (
-          <div
-            aria-hidden
-            className="absolute inset-0 mix-blend-overlay"
-            style={{
-              background:
-                "conic-gradient(from 200deg at 50% 60%, transparent 0deg, oklch(0.7 0.15 18 / 0.35) 18deg, transparent 36deg)",
-            }}
-          />
-        )}
       </div>
 
-      <span className="mt-4 inline-block font-script text-2xl text-primary/80">
-        {cut ? "✨ make a wish ✨" : "tap to cut"}
+      <span className="mt-5 inline-block font-script text-3xl text-shimmer">
+        {cut ? "✨ wish made ✨" : "tap to cut"}
       </span>
     </button>
   );
