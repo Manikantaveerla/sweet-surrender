@@ -49,15 +49,25 @@ export function AmbientBackground({ density = 28 }: { density?: number }) {
 
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 overflow-hidden -z-10">
-      {/* Big breathing glow orbs */}
-      <div className="absolute -top-24 -left-24 h-[36rem] w-[36rem] rounded-full opacity-60 blur-3xl animate-drift"
-        style={{ background: "radial-gradient(circle, oklch(0.9 0.08 30 / 0.7), transparent 70%)" }} />
-      <div className="absolute top-1/3 -right-32 h-[40rem] w-[40rem] rounded-full opacity-55 blur-3xl animate-drift"
-        style={{ background: "radial-gradient(circle, oklch(0.86 0.07 310 / 0.6), transparent 70%)", animationDelay: "3s" }} />
-      <div className="absolute -bottom-32 left-1/4 h-[32rem] w-[32rem] rounded-full opacity-55 blur-3xl animate-drift"
-        style={{ background: "radial-gradient(circle, oklch(0.88 0.08 50 / 0.7), transparent 70%)", animationDelay: "6s" }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[28rem] w-[28rem] rounded-full opacity-40 blur-3xl animate-glow-pulse"
-        style={{ background: "radial-gradient(circle, oklch(0.82 0.13 20 / 0.55), transparent 70%)" }} />
+      {/* Big breathing glow orbs — saturated twilight */}
+      <div className="absolute -top-24 -left-24 h-[36rem] w-[36rem] rounded-full opacity-80 blur-3xl animate-drift"
+        style={{ background: "radial-gradient(circle, oklch(0.7 0.22 18 / 0.85), transparent 70%)" }} />
+      <div className="absolute top-1/3 -right-32 h-[40rem] w-[40rem] rounded-full opacity-75 blur-3xl animate-drift"
+        style={{ background: "radial-gradient(circle, oklch(0.6 0.2 320 / 0.8), transparent 70%)", animationDelay: "3s" }} />
+      <div className="absolute -bottom-32 left-1/4 h-[32rem] w-[32rem] rounded-full opacity-75 blur-3xl animate-drift"
+        style={{ background: "radial-gradient(circle, oklch(0.78 0.18 55 / 0.8), transparent 70%)", animationDelay: "6s" }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[30rem] w-[30rem] rounded-full opacity-60 blur-3xl animate-glow-pulse"
+        style={{ background: "radial-gradient(circle, oklch(0.82 0.18 25 / 0.7), transparent 70%)" }} />
+
+      {/* Vignette for cinematic depth */}
+      <div className="absolute inset-0"
+        style={{ background: "radial-gradient(ellipse at center, transparent 30%, oklch(0.15 0.06 340 / 0.7) 100%)" }} />
+
+      {/* Subtle noise/grain texture for premium feel */}
+      <div className="absolute inset-0 opacity-[0.04] mix-blend-overlay"
+        style={{
+          backgroundImage: "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>\")",
+        }} />
 
       {/* Bokeh dots */}
       {bokeh.map((b) => (
@@ -69,7 +79,7 @@ export function AmbientBackground({ density = 28 }: { density?: number }) {
             left: `${b.left}%`,
             width: b.size,
             height: b.size,
-            background: `radial-gradient(circle, oklch(0.88 0.1 ${b.hue} / 0.55), transparent 70%)`,
+            background: `radial-gradient(circle, oklch(0.85 0.18 ${b.hue} / 0.75), transparent 70%)`,
             animationDelay: `${b.delay}s`,
             animationDuration: `${b.duration}s`,
           }}
