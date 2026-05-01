@@ -42,12 +42,12 @@ export function MusicToggle() {
       type="button"
       onClick={toggle}
       aria-label={playing ? "Pause music" : "Play music"}
-      className="fixed top-5 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full glass-deep shadow-soft transition-all hover:scale-105 hover:shadow-gold focus:outline-none focus:ring-2 focus:ring-accent"
+      className="fixed top-5 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full glass-deep shadow-soft transition-all hover:scale-110 hover:shadow-gold focus:outline-none focus:ring-2 focus:ring-accent ring-1 ring-accent/30"
     >
       {playing ? (
-        <Music className="h-5 w-5 text-primary" />
+        <Music className="h-5 w-5 text-accent" />
       ) : (
-        <VolumeX className="h-5 w-5 text-muted-foreground" />
+        <VolumeX className="h-5 w-5 text-muted-foreground/80" />
       )}
       <span
         className={`absolute inset-0 rounded-full ${playing ? "animate-pulse-glow" : ""}`}
