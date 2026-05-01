@@ -161,8 +161,14 @@
   }
 
   body {
-    background: var(--gradient-twilight);
+    background:
+      radial-gradient(ellipse at 20% 10%, oklch(0.95 0.06 25 / 0.9), transparent 55%),
+      radial-gradient(ellipse at 85% 20%, oklch(0.9 0.08 320 / 0.75), transparent 55%),
+      radial-gradient(ellipse at 50% 90%, oklch(0.92 0.07 50 / 0.85), transparent 60%),
+      linear-gradient(180deg, oklch(0.96 0.025 30) 0%, oklch(0.9 0.05 20) 45%, oklch(0.86 0.06 320) 100%);
+    background-size: 200% 200%, 220% 220%, 240% 240%, 100% 100%;
     background-attachment: fixed;
+    animation: aurora-shift 28s ease-in-out infinite;
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
