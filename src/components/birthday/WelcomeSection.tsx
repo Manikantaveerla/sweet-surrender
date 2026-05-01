@@ -76,8 +76,30 @@ export function WelcomeSection({ onUnlock }: { onUnlock: () => void }) {
       <div className="mx-auto grid w-full max-w-6xl gap-8 lg:gap-16 lg:grid-cols-[1.05fr_0.95fr] items-center">
         {/* Hero photo */}
         <div className="relative animate-fade-up">
-          <div className="absolute -inset-4 rounded-[2.5rem] bg-rose-gold opacity-30 blur-2xl" aria-hidden />
-          <div className="relative overflow-hidden rounded-[2rem] shadow-deep ring-1 ring-white/60">
+          {/* Pulsing aura */}
+          <div className="absolute -inset-6 rounded-[2.5rem] bg-rose-gold opacity-40 blur-3xl animate-glow-pulse" aria-hidden />
+          <div className="absolute -inset-3 rounded-[2.5rem] opacity-50 blur-2xl animate-glow-pulse" aria-hidden
+            style={{ background: "radial-gradient(circle, oklch(0.86 0.12 25 / 0.7), transparent 70%)", animationDelay: "1.5s" }} />
+
+          {/* Orbiting hearts around the photo */}
+          <div aria-hidden className="absolute inset-0 hidden sm:block pointer-events-none">
+            {[0, 1, 2, 3, 4].map((i) => (
+              <span
+                key={i}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-orbit"
+                style={{
+                  ["--orbit-r" as string]: `${260 + i * 18}px`,
+                  animationDuration: `${22 + i * 6}s`,
+                  animationDelay: `${i * -3}s`,
+                  animationDirection: i % 2 ? "reverse" : "normal",
+                }}
+              >
+                <Heart className="h-4 w-4 text-rose-deep fill-primary/70 drop-shadow-[0_0_8px_oklch(0.78_0.12_18/0.8)]" />
+              </span>
+            ))}
+          </div>
+
+          <div className="relative overflow-hidden rounded-[2rem] shadow-deep ring-1 ring-white/60 animate-float-soft">
             <img
               src={heroHer}
               alt={`A portrait for ${config.name}`}
@@ -85,10 +107,14 @@ export function WelcomeSection({ onUnlock }: { onUnlock: () => void }) {
               height={1280}
               className="h-[60vh] sm:h-[68vh] lg:h-[78vh] w-full object-cover object-[35%_top]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-rose/40 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-rose/50 via-transparent to-transparent" />
+            {/* Sparkle accents on photo */}
+            <Sparkles className="absolute top-5 right-5 h-5 w-5 text-white/90 animate-twinkle drop-shadow-lg" />
+            <Sparkles className="absolute top-1/3 left-6 h-3 w-3 text-white/80 animate-twinkle drop-shadow-lg" style={{ animationDelay: "1s" }} />
+            <Sparkles className="absolute bottom-1/3 right-8 h-4 w-4 text-white/80 animate-twinkle drop-shadow-lg" style={{ animationDelay: "2s" }} />
             <div className="absolute bottom-5 left-5 right-5 flex items-center gap-2 glass rounded-2xl px-4 py-3 shadow-soft">
-              <Heart className="h-4 w-4 text-primary" />
-              <p className="font-script text-2xl text-primary leading-none">For {config.name}</p>
+              <Heart className="h-4 w-4 text-primary fill-primary animate-heartbeat" />
+              <p className="font-script text-2xl leading-none text-shimmer">For {config.name}</p>
             </div>
           </div>
         </div>
