@@ -29,14 +29,21 @@ export function GiftBox({
     >
       <div
         className={`absolute inset-0 rounded-full blur-3xl transition-all duration-700 ${
-          opened ? "scale-150 opacity-100" : "scale-90 opacity-60 group-hover:scale-100"
+          opened ? "scale-150 opacity-100" : "scale-90 opacity-80 group-hover:scale-100"
         }`}
-        style={{ background: "radial-gradient(circle, oklch(0.88 0.1 50 / 0.7), transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, oklch(0.82 0.18 50 / 0.85), transparent 65%)" }}
+        aria-hidden
+      />
+      <div
+        className={`absolute inset-0 rounded-full blur-2xl transition-all duration-700 ${
+          opened ? "scale-125 opacity-95" : "scale-75 opacity-65"
+        }`}
+        style={{ background: "radial-gradient(circle, oklch(0.78 0.18 18 / 0.7), transparent 60%)" }}
         aria-hidden
       />
       <div
         className={`relative transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-          opened ? "scale-110" : "group-hover:scale-105 animate-pulse-glow rounded-3xl"
+          opened ? "scale-110" : "group-hover:scale-105 animate-float-soft"
         }`}
       >
         <img
@@ -44,10 +51,10 @@ export function GiftBox({
           alt="Gift box"
           width={1024}
           height={1024}
-          className={`${dims} w-auto mx-auto drop-shadow-[0_30px_50px_oklch(0.55_0.16_15/0.4)] ${opened ? "opacity-0" : "opacity-100"} transition-opacity duration-500`}
+          className={`${dims} w-auto mx-auto drop-shadow-[0_40px_60px_oklch(0.42_0.19_12/0.6)] ${opened ? "opacity-0" : "opacity-100"} transition-opacity duration-500`}
         />
       </div>
-      <span className="mt-4 inline-block font-script text-2xl text-primary/80">{label}</span>
+      <span className="mt-5 inline-block font-script text-3xl text-shimmer">{label}</span>
     </button>
   );
 }
