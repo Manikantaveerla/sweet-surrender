@@ -3,16 +3,16 @@ import { ChevronRight, Heart } from "lucide-react";
 import { config } from "@/lib/birthday-config";
 import { SectionShell } from "./SectionShell";
 import { Ornament, PremiumButton } from "./Ornament";
-import m1 from "@/assets/memory-1.jpg";
-import m2 from "@/assets/memory-2.jpg";
-import m3 from "@/assets/memory-3.jpg";
-import m4 from "@/assets/memory-4.jpg";
+import m1 from "../../../videos/Picsart_26-04-17_19-33-00-409.jpg.jpeg";
+import m2 from "../../../videos/Blue and Gold Modern Birthday Instagram Post_20260426_214246_0000.png";
+import placeholder1 from "@/assets/memory-2.jpg";
+import placeholder2 from "@/assets/memory-3.jpg";
 
 const photos = [
-  { src: m1, rotate: -6, top: "5%", left: "2%" },
-  { src: m3, rotate: 5, top: "0%", right: "4%" },
-  { src: m2, rotate: -4, bottom: "8%", left: "6%" },
-  { src: m4, rotate: 7, bottom: "3%", right: "2%" },
+  { src: m1, rotate: -8, top: "2%", left: "4%", isVideo: false },
+  { src: placeholder1, rotate: 6, top: "10%", right: "6%", isVideo: false },
+  { src: placeholder2, rotate: -5, bottom: "10%", left: "8%", isVideo: false },
+  { src: m2, rotate: 9, bottom: "4%", right: "4%", isVideo: false },
 ];
 
 export function Gift2Section({ onNext }: { onNext: () => void }) {
@@ -89,7 +89,7 @@ export function Gift2Section({ onNext }: { onNext: () => void }) {
                 </div>
                 <div className="absolute top-5 left-6 flex items-center gap-2 parchment-muted">
                   <Heart className="h-3.5 w-3.5 fill-current" />
-                  <span className="font-script text-base">a love letter</span>
+                  <span className="font-script text-base">a Birthday letter</span>
                 </div>
                 <p className="mt-8 font-script text-5xl parchment-ink leading-none">Dearest you,</p>
                 <div className="mt-6 font-display text-lg sm:text-xl leading-[1.7] whitespace-pre-line" style={{ color: "oklch(0.32 0.08 20)" }}>
@@ -110,7 +110,7 @@ export function Gift2Section({ onNext }: { onNext: () => void }) {
               {photos.map((p, i) => (
                 <div
                   key={i}
-                  className="absolute h-44 w-36 sm:h-56 sm:w-48 rounded-xl bg-cream p-2.5 shadow-deep ring-1 ring-accent/30 transition-all duration-500 hover:scale-110 hover:rotate-0 hover:z-10 animate-float-soft"
+                  className="absolute w-32 sm:w-44 rounded-xl bg-cream p-2.5 shadow-deep ring-1 ring-accent/30 transition-all duration-500 hover:scale-110 hover:rotate-0 hover:z-10 animate-float-soft"
                   style={{
                     top: p.top,
                     left: p.left,
@@ -120,8 +120,12 @@ export function Gift2Section({ onNext }: { onNext: () => void }) {
                     animationDelay: `${i * 0.4}s`,
                   }}
                 >
-                  <img src={p.src} alt="memory" loading="lazy" width={400} height={400} className="h-[85%] w-full object-cover rounded-md" />
-                  <p className="mt-1.5 text-center font-script text-lg" style={{ color: "oklch(0.42 0.16 18)" }}>us ♡</p>
+                  {p.isVideo ? (
+                    <video src={p.src} autoPlay loop muted playsInline className="w-full h-auto object-contain rounded-md" />
+                  ) : (
+                    <img src={p.src} alt="memory" loading="lazy" className="w-full h-auto object-contain rounded-md" />
+                  )}
+                  <p className="mt-2 text-center font-script text-lg" style={{ color: "oklch(0.42 0.16 18)" }}>us ♡</p>
                 </div>
               ))}
             </div>
