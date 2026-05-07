@@ -24,7 +24,7 @@ export function Cake2Section({ onNext }: { onNext: () => void }) {
           A tiny tradition, just for us. Close your eyes — the next surprise is the loudest one.
         </p>
 
-        <div className="mt-12 animate-bloom" style={{ animationDelay: "0.35s" }}>
+        <div className="mt-8 sm:mt-12 animate-bloom" style={{ animationDelay: "0.35s" }}>
           <InteractiveCake variant={2} onCut={() => setCut(true)} />
         </div>
 
@@ -33,7 +33,7 @@ export function Cake2Section({ onNext }: { onNext: () => void }) {
         </p>
 
         {cut && (
-          <div className="mt-12 animate-bloom">
+          <div className="mt-8 sm:mt-12 animate-bloom">
             <PremiumButton onClick={onNext}>
               Reveal the big one
               <ChevronRight className="h-5 w-5" />

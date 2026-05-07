@@ -9,7 +9,7 @@ export function SectionShell({
 }) {
   return (
     <section
-      className={`relative min-h-[100dvh] w-full flex items-center justify-center px-4 sm:px-8 py-20 sm:py-24 ${className}`}
+      className={`relative min-h-[100dvh] w-full flex items-center justify-center px-4 sm:px-8 py-12 sm:py-24 ${className}`}
     >
       {children}
     </section>

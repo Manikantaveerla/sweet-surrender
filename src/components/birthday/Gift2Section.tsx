@@ -30,7 +30,7 @@ export function Gift2Section({ onNext }: { onNext: () => void }) {
         </h2>
 
         {!opened ? (
-          <div className="mt-14 animate-bloom">
+          <div className="mt-8 sm:mt-14 animate-bloom">
             <button
               type="button"
               onClick={() => setOpened(true)}
@@ -79,7 +79,7 @@ export function Gift2Section({ onNext }: { onNext: () => void }) {
             </button>
           </div>
         ) : (
-          <div className="mt-10 grid lg:grid-cols-[1.1fr_0.9fr] gap-8 sm:gap-12 items-start">
+          <div className="mt-6 sm:mt-10 grid lg:grid-cols-[1.1fr_0.9fr] gap-8 sm:gap-12 items-start">
             {/* Letter */}
             <div className="relative animate-bloom">
               <div className="absolute -inset-6 rounded-[2.5rem] opacity-50 blur-3xl animate-glow-pulse" aria-hidden

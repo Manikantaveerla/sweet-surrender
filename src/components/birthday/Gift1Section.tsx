@@ -21,11 +21,11 @@ export function Gift1Section({ onNext }: { onNext: () => void }) {
         </h2>
 
         {!opened ? (
-          <div className="mt-14 animate-bloom">
+          <div className="mt-8 sm:mt-14 animate-bloom">
             <GiftBox onOpen={() => setOpened(true)} />
           </div>
         ) : (
-          <div className="mt-10 animate-bloom">
+          <div className="mt-6 sm:mt-10 animate-bloom">
             <div className="relative mx-auto max-w-3xl">
               {/* Halo */}
               <div className="absolute -inset-8 rounded-[2.5rem] opacity-60 blur-3xl animate-glow-pulse" aria-hidden
@@ -59,10 +59,10 @@ export function Gift1Section({ onNext }: { onNext: () => void }) {
                   )}
                 </CornerFrame>
               </div>
-              <p className="mt-8 font-script text-3xl text-shimmer">{config.gift1Caption}</p>
+              <p className="mt-6 sm:mt-8 font-script text-2xl sm:text-3xl text-shimmer">{config.gift1Caption}</p>
             </div>
 
-            <div className="mt-12">
+            <div className="mt-8 sm:mt-12">
               <PremiumButton onClick={onNext}>
                 The next gift
                 <ChevronRight className="h-5 w-5" />

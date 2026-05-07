@@ -37,12 +37,12 @@ export function FinaleSection() {
             <p className="mt-6 max-w-xl mx-auto text-lg text-muted-foreground font-light italic">
               Inside is a little vault — videos, photos, words, every soft thing I've been keeping for today.
             </p>
-            <div className="mt-14">
+            <div className="mt-8 sm:mt-14">
               <GiftBox onOpen={() => setOpened(true)} size="lg" label="open the vault" />
             </div>
           </div>
         ) : (
-          <div className="space-y-20">
+          <div className="space-y-12 sm:space-y-20">
             <header className="animate-fade-up">
               <Ornament label={config.finaleTitle.toLowerCase()} />
               <h2 className="mt-4 font-display text-[2.5rem] sm:text-[5rem] lg:text-[6rem] leading-[0.95] text-foreground tracking-tight">
@@ -143,7 +143,7 @@ export function FinaleSection() {
             </section>
 
             {/* Closing */}
-            <section className="pt-12 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+            <section className="pt-8 sm:pt-12 animate-fade-up" style={{ animationDelay: "0.4s" }}>
               <div className="relative mx-auto max-w-2xl">
                 <div className="absolute -inset-8 rounded-[3rem] opacity-60 blur-3xl animate-glow-pulse" aria-hidden
                   style={{ background: "radial-gradient(circle, oklch(0.82 0.14 75 / 0.6), transparent 70%)" }} />
