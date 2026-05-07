@@ -3,16 +3,16 @@ import { ChevronRight, Heart } from "lucide-react";
 import { config } from "@/lib/birthday-config";
 import { SectionShell } from "./SectionShell";
 import { Ornament, PremiumButton } from "./Ornament";
-const m1 = "/videos/Picsart_26-04-17_19-33-00-409.jpg.jpeg";
-const m2 = "/videos/Blue and Gold Modern Birthday Instagram Post_20260426_214246_0000.png";
-import placeholder1 from "@/assets/memory-2.jpg";
-import placeholder2 from "@/assets/memory-3.jpg";
+import m1 from "@/assets/memory-1.jpg";
+import m2 from "@/assets/memory-2.jpg";
+import m3 from "@/assets/memory-3.jpg";
+import m4 from "@/assets/memory-4.jpg";
 
 const photos = [
-  { src: m1, rotate: -8, top: "2%", left: "4%", isVideo: false },
-  { src: placeholder1, rotate: 6, top: "10%", right: "6%", isVideo: false },
-  { src: placeholder2, rotate: -5, bottom: "10%", left: "8%", isVideo: false },
-  { src: m2, rotate: 9, bottom: "4%", right: "4%", isVideo: false },
+  { src: m1, rotate: -6, top: "5%", left: "2%" },
+  { src: m3, rotate: 5, top: "0%", right: "4%" },
+  { src: m2, rotate: -4, bottom: "8%", left: "6%" },
+  { src: m4, rotate: 7, bottom: "3%", right: "2%" },
 ];
 
 export function Gift2Section({ onNext }: { onNext: () => void }) {
@@ -78,39 +78,68 @@ export function Gift2Section({ onNext }: { onNext: () => void }) {
             </button>
           </div>
         ) : (
+<<<<<<< HEAD
           <div className="mt-10 grid lg:grid-cols-[1.1fr_0.9fr] gap-8 sm:gap-12 items-start">
+=======
+          <div className="mt-12 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-center">
+>>>>>>> 9cf5e9099ce14a6c882f9ee85c442925179ee63a
             {/* Letter */}
             <div className="relative animate-bloom">
               <div className="absolute -inset-6 rounded-[2.5rem] opacity-50 blur-3xl animate-glow-pulse" aria-hidden
                 style={{ background: "radial-gradient(circle, oklch(0.82 0.14 75 / 0.55), transparent 70%)" }} />
+<<<<<<< HEAD
               <article className="relative rounded-[1.5rem] p-6 sm:p-12 text-left parchment animate-fade-up" style={{ animationDelay: "0.1s" }}>
                 <div className="absolute top-5 right-6 font-script text-2xl parchment-muted">
+=======
+              <article className="relative rounded-[1.75rem] p-6 sm:p-10 lg:p-12 text-left parchment overflow-hidden">
+                <div className="hidden sm:block absolute top-5 right-6 font-script text-2xl parchment-muted">
+>>>>>>> 9cf5e9099ce14a6c882f9ee85c442925179ee63a
                   to {config.shortName}
                 </div>
-                <div className="absolute top-5 left-6 flex items-center gap-2 parchment-muted">
+                <div className="hidden sm:flex absolute top-5 left-6 items-center gap-2 parchment-muted">
                   <Heart className="h-3.5 w-3.5 fill-current" />
-                  <span className="font-script text-base">a Birthday letter</span>
+                  <span className="font-script text-base">a love letter</span>
                 </div>
+<<<<<<< HEAD
                 <p className="mt-6 font-script text-4xl sm:text-5xl parchment-ink leading-none">Dearest you,</p>
                 <div className="mt-6 font-display text-lg sm:text-xl leading-[1.7] whitespace-pre-line" style={{ color: "oklch(0.32 0.08 20)" }}>
+=======
+                <div className="sm:hidden flex items-center justify-between parchment-muted mb-4">
+                  <div className="flex items-center gap-2">
+                    <Heart className="h-3.5 w-3.5 fill-current" />
+                    <span className="font-script text-base">a love letter</span>
+                  </div>
+                  <span className="font-script text-xl">to {config.shortName}</span>
+                </div>
+                <p className="mt-2 sm:mt-8 font-script text-4xl sm:text-5xl parchment-ink leading-tight">Dearest you,</p>
+                <div className="mt-5 sm:mt-6 font-display text-base sm:text-lg lg:text-xl leading-[1.7] whitespace-pre-line break-words" style={{ color: "oklch(0.32 0.08 20)" }}>
+>>>>>>> 9cf5e9099ce14a6c882f9ee85c442925179ee63a
                   {config.letterText}
                 </div>
-                <div className="mt-8 flex items-center justify-end gap-3">
+                <div className="mt-7 sm:mt-8 flex items-center justify-end gap-3">
                   <span className="h-px w-16 bg-current opacity-30 parchment-ink" />
-                  <p className="font-script text-3xl parchment-ink">always yours</p>
+                  <p className="font-script text-2xl sm:text-3xl parchment-ink">always yours</p>
                 </div>
               </article>
             </div>
 
             {/* Photo collage */}
+<<<<<<< HEAD
             <div className="relative h-[22rem] sm:h-[34rem] animate-fade-up" style={{ animationDelay: "0.3s" }}>
+=======
+            <div className="relative h-[24rem] sm:h-[30rem] lg:h-[34rem] animate-fade-up" style={{ animationDelay: "0.3s" }}>
+>>>>>>> 9cf5e9099ce14a6c882f9ee85c442925179ee63a
               {/* Center glow */}
               <div className="absolute inset-1/4 rounded-full opacity-40 blur-3xl animate-glow-pulse" aria-hidden
                 style={{ background: "radial-gradient(circle, oklch(0.82 0.14 75 / 0.5), transparent 70%)" }} />
               {photos.map((p, i) => (
                 <div
                   key={i}
+<<<<<<< HEAD
                   className="absolute w-24 sm:w-44 rounded-xl bg-cream p-2 shadow-deep ring-1 ring-accent/30 transition-all duration-500 hover:scale-110 hover:rotate-0 hover:z-10 animate-float-soft"
+=======
+                  className="absolute h-36 w-28 sm:h-52 sm:w-44 lg:h-56 lg:w-48 rounded-xl bg-cream p-2 sm:p-2.5 shadow-deep ring-1 ring-accent/30 transition-all duration-500 hover:scale-110 hover:rotate-0 hover:z-10 animate-float-soft"
+>>>>>>> 9cf5e9099ce14a6c882f9ee85c442925179ee63a
                   style={{
                     top: p.top,
                     left: p.left,
@@ -120,12 +149,8 @@ export function Gift2Section({ onNext }: { onNext: () => void }) {
                     animationDelay: `${i * 0.4}s`,
                   }}
                 >
-                  {p.isVideo ? (
-                    <video src={p.src} autoPlay loop muted playsInline className="w-full h-auto object-contain rounded-md" />
-                  ) : (
-                    <img src={p.src} alt="memory" loading="lazy" className="w-full h-auto object-contain rounded-md" />
-                  )}
-                  <p className="mt-2 text-center font-script text-lg" style={{ color: "oklch(0.42 0.16 18)" }}>us ♡</p>
+                  <img src={p.src} alt="memory" loading="lazy" width={400} height={400} className="h-[85%] w-full object-cover rounded-md" />
+                  <p className="mt-1.5 text-center font-script text-lg" style={{ color: "oklch(0.42 0.16 18)" }}>us ♡</p>
                 </div>
               ))}
             </div>

@@ -9,11 +9,11 @@ export const config = {
   passcode: "1614",
 
   // Welcome screen
-  welcomeHeading: "A surprise made by Manikanta  only for you",
+  welcomeHeading: "A surprise made only for you",
   welcomeSubtitle: "Type the four little numbers that mean the most to us. Something soft and sparkling is waiting on the other side.",
 
   // Birthday wish
-  birthdayHeadline: "Happy Birthday, Viju Lu",
+  birthdayHeadline: "Happy Birthday, my whole heart",
   birthdaySubline: "Another year of being my favorite person — and my favorite chaos.",
   cakeOneCaption: "Tap the cake. I dare you. ✨",
 
@@ -22,20 +22,20 @@ export const config = {
   gift1Subtitle: "A little moving memory, just for you",
   gift1Caption: "Press play, beautiful. This one's a smile-on-loop.",
   // Replace with your uploaded video URL (mp4) or keep blank to show placeholder
-  gift1VideoUrl: "/videos/rangula oo ❤️ [1F3C20F].mp4",
+  gift1VideoUrl: "",
 
   // Gift 2 — Letter + photos
   gift2Title: "Gift Two",
   gift2Subtitle: "Words I've been waiting to hand you",
-  letterText: `My Viju Lu,
+  letterText: `My love,
 
-Happy Happiest Birthday Viju Lu , you are most special person in my life. Nitho matldithea atha bhagutadho aa happiness enka yavari tho matldina radhu. Keep smiling always viju lu ... 
-Nenu chala lucky adhuku atea nuv na life lo unav. Nuv matldina atha sepu happiness aa thapa sadness asalu radhu. Na life lo the most special persons atea edharea vakati amma enka nuvu viju lu.
-Appudu ina theliyaka emana antea kopam thechukoku , niku enka chala birthdays ela chala suprises evali ani vundhi ... and Chala chala Talented person vi nuvu vijulu ni reels , ni songs , ni dancing ,and also a topper....
-Onces again happy birthday viju lu. EE website just a gift aa kadhu na nichi niku echea na first gift with all efforts ,time and memories. YOu are Best Gift that i reviced form the god.
-enka vaka sare Happy Birthday Viju Lu once again ....
+If I tried to write down every reason you make my world softer, the page would run out before my heart did. So here is a small piece of an endless thing.
 
-Yours, Manikanta veerla always.`,
+You are the kindest mischief I've ever met. The reason ordinary days quietly turn into stories. The voice I look for in every room.
+
+On your birthday, I just want you to know — I would choose you in every version of every life, every single time.
+
+Yours, always.`,
 
   // Gift 3 trigger / second cake
   cakeTwoCaption: "One more wish, princess. Make it a big one.",
