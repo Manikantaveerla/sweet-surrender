@@ -24,7 +24,7 @@ export function Gift2Section({ onNext }: { onNext: () => void }) {
         <div className="animate-fade-up">
           <Ornament label={config.gift2Title.toLowerCase()} />
         </div>
-        <h2 className="mt-6 font-display text-4xl sm:text-6xl lg:text-7xl text-foreground animate-fade-up tracking-tight" style={{ animationDelay: "0.1s" }}>
+        <h2 className="mt-4 font-display text-[2.5rem] sm:text-[5rem] lg:text-[6rem] text-foreground animate-fade-up tracking-tight" style={{ animationDelay: "0.1s" }}>
           <span className="text-shimmer italic font-light">{config.gift2Subtitle}</span>
         </h2>
 
@@ -78,12 +78,12 @@ export function Gift2Section({ onNext }: { onNext: () => void }) {
             </button>
           </div>
         ) : (
-          <div className="mt-12 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+          <div className="mt-10 grid lg:grid-cols-[1.1fr_0.9fr] gap-8 sm:gap-12 items-start">
             {/* Letter */}
             <div className="relative animate-bloom">
               <div className="absolute -inset-6 rounded-[2.5rem] opacity-50 blur-3xl animate-glow-pulse" aria-hidden
                 style={{ background: "radial-gradient(circle, oklch(0.82 0.14 75 / 0.55), transparent 70%)" }} />
-              <article className="relative rounded-[1.75rem] p-9 sm:p-12 text-left parchment animate-fade-up" style={{ animationDelay: "0.1s" }}>
+              <article className="relative rounded-[1.5rem] p-6 sm:p-12 text-left parchment animate-fade-up" style={{ animationDelay: "0.1s" }}>
                 <div className="absolute top-5 right-6 font-script text-2xl parchment-muted">
                   to {config.shortName}
                 </div>
@@ -91,7 +91,7 @@ export function Gift2Section({ onNext }: { onNext: () => void }) {
                   <Heart className="h-3.5 w-3.5 fill-current" />
                   <span className="font-script text-base">a Birthday letter</span>
                 </div>
-                <p className="mt-8 font-script text-5xl parchment-ink leading-none">Dearest you,</p>
+                <p className="mt-6 font-script text-4xl sm:text-5xl parchment-ink leading-none">Dearest you,</p>
                 <div className="mt-6 font-display text-lg sm:text-xl leading-[1.7] whitespace-pre-line" style={{ color: "oklch(0.32 0.08 20)" }}>
                   {config.letterText}
                 </div>
@@ -103,14 +103,14 @@ export function Gift2Section({ onNext }: { onNext: () => void }) {
             </div>
 
             {/* Photo collage */}
-            <div className="relative h-[28rem] sm:h-[34rem] animate-fade-up" style={{ animationDelay: "0.3s" }}>
+            <div className="relative h-[22rem] sm:h-[34rem] animate-fade-up" style={{ animationDelay: "0.3s" }}>
               {/* Center glow */}
               <div className="absolute inset-1/4 rounded-full opacity-40 blur-3xl animate-glow-pulse" aria-hidden
                 style={{ background: "radial-gradient(circle, oklch(0.82 0.14 75 / 0.5), transparent 70%)" }} />
               {photos.map((p, i) => (
                 <div
                   key={i}
-                  className="absolute w-32 sm:w-44 rounded-xl bg-cream p-2.5 shadow-deep ring-1 ring-accent/30 transition-all duration-500 hover:scale-110 hover:rotate-0 hover:z-10 animate-float-soft"
+                  className="absolute w-24 sm:w-44 rounded-xl bg-cream p-2 shadow-deep ring-1 ring-accent/30 transition-all duration-500 hover:scale-110 hover:rotate-0 hover:z-10 animate-float-soft"
                   style={{
                     top: p.top,
                     left: p.left,

@@ -16,7 +16,7 @@ export function Cake2Section({ onNext }: { onNext: () => void }) {
         <div className="animate-fade-up">
           <Ornament label="one more wish" />
         </div>
-        <h2 className="mt-6 font-display text-[2.75rem] sm:text-[4.5rem] lg:text-[5.5rem] leading-[1] text-foreground animate-fade-up tracking-tight" style={{ animationDelay: "0.1s" }}>
+        <h2 className="mt-4 font-display text-[2.25rem] sm:text-[4.5rem] lg:text-[5.5rem] leading-[1] text-foreground animate-fade-up tracking-tight" style={{ animationDelay: "0.1s" }}>
           Because <span className="text-shimmer italic font-light">one cake</span>
           <br className="hidden sm:block" /> was never enough.
         </h2>
@@ -28,7 +28,7 @@ export function Cake2Section({ onNext }: { onNext: () => void }) {
           <InteractiveCake variant={2} onCut={() => setCut(true)} />
         </div>
 
-        <p className="mt-8 font-script text-3xl text-accent/85">
+        <p className="mt-6 font-script text-2xl sm:text-3xl text-accent/85">
           {config.cakeTwoCaption}
         </p>
 

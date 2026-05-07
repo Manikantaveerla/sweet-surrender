@@ -391,3 +391,55 @@ input[type="text"].pin-input::-webkit-inner-spin-button { -webkit-appearance: no
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Mobile touch & scroll improvements */
+@media (max-width: 640px) {
+  /* Smoother touch scrolling */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent horizontal overflow */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Better tap targets on mobile */
+  button, a, input {
+    min-height: 44px;
+  }
+
+  /* Reduce blur on mobile for performance */
+  .glass, .glass-deep {
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+  }
+
+  /* Scale down orbit animations on mobile */
+  .animate-orbit {
+    display: none;
+  }
+
+  /* Reduce glow blur on mobile for performance */
+  .animate-glow-pulse {
+    animation-duration: 6s;
+  }
+
+  /* Parchment padding on mobile */
+  .parchment {
+    padding: 1.5rem;
+  }
+
+  /* Font size safety */
+  .font-script {
+    line-height: 1.1;
+  }
+}
+
+/* Prevent zoom on input focus on iOS */
+@media (max-width: 640px) {
+  input[type="text"] {
+    font-size: 16px;
+  }
+}

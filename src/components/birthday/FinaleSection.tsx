@@ -45,7 +45,7 @@ export function FinaleSection() {
           <div className="space-y-20">
             <header className="animate-fade-up">
               <Ornament label={config.finaleTitle.toLowerCase()} />
-              <h2 className="mt-6 font-display text-[3rem] sm:text-[5rem] lg:text-[6rem] leading-[0.95] text-foreground tracking-tight">
+              <h2 className="mt-4 font-display text-[2.5rem] sm:text-[5rem] lg:text-[6rem] leading-[0.95] text-foreground tracking-tight">
                 Everything I love,
                 <br className="hidden sm:block" />
                 <span className="text-shimmer italic font-light">in one place.</span>
@@ -149,8 +149,8 @@ export function FinaleSection() {
                   style={{ background: "radial-gradient(circle, oklch(0.82 0.14 75 / 0.6), transparent 70%)" }} />
                 <div className="relative glass-deep rounded-[2rem] p-12 shadow-deep ring-glow">
                   <Ornament icon className="mb-6" />
-                  <p className="font-script text-6xl sm:text-7xl text-shimmer leading-none">happy birthday,</p>
-                  <p className="mt-3 font-display text-4xl sm:text-5xl text-foreground italic font-light">my forever favorite.</p>
+                  <p className="font-script text-5xl sm:text-6xl sm:text-7xl text-shimmer leading-none">happy birthday,</p>
+                  <p className="mt-3 font-display text-3xl sm:text-4xl sm:text-5xl text-foreground italic font-light">my forever favorite.</p>
                   <p className="mt-7 text-muted-foreground italic font-light max-w-md mx-auto">
                     Thank you for being the best part of every day. I'd build a thousand of these for you.
                   </p>

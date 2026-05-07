@@ -57,7 +57,7 @@ export function PremiumButton({
     <button
       onClick={onClick}
       type="button"
-      className={`group relative inline-flex items-center gap-2 rounded-full px-9 py-4 text-base font-medium text-primary-foreground transition-all duration-500 hover:scale-[1.04] focus:outline-none focus:ring-4 focus:ring-accent/40 ${className}`}
+      className={`group relative inline-flex items-center justify-center gap-2 rounded-full px-7 sm:px-9 py-3.5 sm:py-4 text-sm sm:text-base font-medium text-primary-foreground transition-all duration-500 hover:scale-[1.04] focus:outline-none focus:ring-4 focus:ring-accent/40 w-full sm:w-auto ${className}`}
       style={{
         background: "linear-gradient(135deg, oklch(0.88 0.14 75) 0%, oklch(0.78 0.18 18) 50%, oklch(0.62 0.18 340) 100%)",
         boxShadow:

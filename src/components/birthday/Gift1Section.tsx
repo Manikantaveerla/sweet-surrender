@@ -16,7 +16,7 @@ export function Gift1Section({ onNext }: { onNext: () => void }) {
         <div className="animate-fade-up">
           <Ornament label={config.gift1Title.toLowerCase()} />
         </div>
-        <h2 className="mt-6 font-display text-4xl sm:text-6xl lg:text-7xl text-foreground animate-fade-up tracking-tight" style={{ animationDelay: "0.1s" }}>
+        <h2 className="mt-4 font-display text-[2.5rem] sm:text-[5rem] lg:text-[6.5rem] text-foreground animate-fade-up tracking-tight" style={{ animationDelay: "0.1s" }}>
           <span className="text-shimmer italic font-light">{config.gift1Subtitle}</span>
         </h2>
 

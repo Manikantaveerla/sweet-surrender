@@ -74,7 +74,7 @@ export function WelcomeSection({ onUnlock }: { onUnlock: () => void }) {
   return (
     <SectionShell>
       <Confetti active={success} count={120} />
-      <div className="mx-auto grid w-full max-w-6xl gap-10 lg:gap-20 lg:grid-cols-[1.05fr_0.95fr] items-center">
+      <div className="mx-auto grid w-full max-w-6xl gap-8 lg:gap-20 lg:grid-cols-[1.05fr_0.95fr] items-center">
         {/* Hero photo */}
         <div className="relative animate-fade-up">
           {/* Layered auras */}
@@ -113,7 +113,7 @@ export function WelcomeSection({ onUnlock }: { onUnlock: () => void }) {
               alt={`A portrait for ${config.name}`}
               width={1024}
               height={1280}
-              className="h-[64vh] sm:h-[72vh] lg:h-[82vh] w-full object-cover object-[35%_top]"
+              className="h-[45vh] sm:h-[60vh] lg:h-[82vh] w-full object-cover object-[35%_top]"
             />
             {/* Cinematic dual gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/10 to-transparent" />
@@ -148,7 +148,7 @@ export function WelcomeSection({ onUnlock }: { onUnlock: () => void }) {
               style={{ background: "radial-gradient(circle, oklch(0.62 0.18 320 / 0.6), transparent 70%)" }} />
             <div className="relative">
               <Ornament label="a little secret" className="justify-start" />
-              <h1 className="mt-6 font-display text-[2.5rem] sm:text-[3.25rem] lg:text-[4rem] leading-[1.02] text-foreground">
+              <h1 className="mt-5 font-display text-[2rem] sm:text-[3.25rem] lg:text-[4rem] leading-[1.05] text-foreground">
                 {config.welcomeHeading.split(" ").map((w, i, arr) =>
                   i === arr.length - 1 ? (
                     <span key={i} className="text-shimmer italic font-light"> {w}</span>
@@ -162,7 +162,7 @@ export function WelcomeSection({ onUnlock }: { onUnlock: () => void }) {
               </p>
 
               {/* Pin inputs */}
-              <div className="mt-9 flex items-center gap-3 sm:gap-4">
+              <div className="mt-7 flex items-center gap-2 sm:gap-4">
                 {digits.map((d, i) => (
                   <input
                     key={i}
@@ -175,7 +175,7 @@ export function WelcomeSection({ onUnlock }: { onUnlock: () => void }) {
                     onKeyDown={(e) => onKey(i, e)}
                     onPaste={onPaste}
                     aria-label={`Passcode digit ${i + 1}`}
-                    className={`pin-input h-16 w-14 sm:h-20 sm:w-16 rounded-2xl bg-white/8 backdrop-blur border-2 text-center font-display text-3xl sm:text-4xl text-accent shadow-soft transition-all focus:outline-none focus:ring-4 focus:ring-accent/40 ${
+                    className={`pin-input h-14 w-12 sm:h-20 sm:w-16 rounded-2xl bg-white/8 backdrop-blur border-2 text-center font-display text-2xl sm:text-4xl text-accent shadow-soft transition-all focus:outline-none focus:ring-4 focus:ring-accent/40 ${
                       error ? "border-destructive" : success ? "border-accent ring-glow" : "border-accent/30 focus:border-accent"
                     }`}
                   />
