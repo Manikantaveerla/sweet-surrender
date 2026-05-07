@@ -3,8 +3,8 @@ import { ChevronRight, Heart } from "lucide-react";
 import { config } from "@/lib/birthday-config";
 import { SectionShell } from "./SectionShell";
 import { Ornament, PremiumButton } from "./Ornament";
-import m1 from "../../../videos/Picsart_26-04-17_19-33-00-409.jpg.jpeg";
-import m2 from "../../../videos/Blue and Gold Modern Birthday Instagram Post_20260426_214246_0000.png";
+const m1 = "/videos/Picsart_26-04-17_19-33-00-409.jpg.jpeg";
+const m2 = "/videos/Blue and Gold Modern Birthday Instagram Post_20260426_214246_0000.png";
 import placeholder1 from "@/assets/memory-2.jpg";
 import placeholder2 from "@/assets/memory-3.jpg";
 

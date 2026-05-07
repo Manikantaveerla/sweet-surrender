@@ -22,7 +22,7 @@ export const config = {
   gift1Subtitle: "A little moving memory, just for you",
   gift1Caption: "Press play, beautiful. This one's a smile-on-loop.",
   // Replace with your uploaded video URL (mp4) or keep blank to show placeholder
-  gift1VideoUrl: "videos/rangula oo ❤️ [1F3C20F].mp4",
+  gift1VideoUrl: "/videos/rangula oo ❤️ [1F3C20F].mp4",
 
   // Gift 2 — Letter + photos
   gift2Title: "Gift Two",
