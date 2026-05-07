@@ -78,39 +78,46 @@ export function Gift2Section({ onNext }: { onNext: () => void }) {
             </button>
           </div>
         ) : (
-          <div className="mt-12 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+          <div className="mt-12 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-12 items-center">
             {/* Letter */}
             <div className="relative animate-bloom">
               <div className="absolute -inset-6 rounded-[2.5rem] opacity-50 blur-3xl animate-glow-pulse" aria-hidden
                 style={{ background: "radial-gradient(circle, oklch(0.82 0.14 75 / 0.55), transparent 70%)" }} />
-              <article className="relative rounded-[1.75rem] p-9 sm:p-12 text-left parchment animate-letter-unseal" style={{ animationDelay: "0.1s" }}>
-                <div className="absolute top-5 right-6 font-script text-2xl parchment-muted">
+              <article className="relative rounded-[1.75rem] p-6 sm:p-10 lg:p-12 text-left parchment animate-letter-unseal overflow-hidden" style={{ animationDelay: "0.1s" }}>
+                <div className="hidden sm:block absolute top-5 right-6 font-script text-2xl parchment-muted">
                   to {config.shortName}
                 </div>
-                <div className="absolute top-5 left-6 flex items-center gap-2 parchment-muted">
+                <div className="hidden sm:flex absolute top-5 left-6 items-center gap-2 parchment-muted">
                   <Heart className="h-3.5 w-3.5 fill-current" />
                   <span className="font-script text-base">a love letter</span>
                 </div>
-                <p className="mt-8 font-script text-5xl parchment-ink leading-none">Dearest you,</p>
-                <div className="mt-6 font-display text-lg sm:text-xl leading-[1.7] whitespace-pre-line" style={{ color: "oklch(0.32 0.08 20)" }}>
+                <div className="sm:hidden flex items-center justify-between parchment-muted mb-4">
+                  <div className="flex items-center gap-2">
+                    <Heart className="h-3.5 w-3.5 fill-current" />
+                    <span className="font-script text-base">a love letter</span>
+                  </div>
+                  <span className="font-script text-xl">to {config.shortName}</span>
+                </div>
+                <p className="mt-2 sm:mt-8 font-script text-4xl sm:text-5xl parchment-ink leading-tight">Dearest you,</p>
+                <div className="mt-5 sm:mt-6 font-display text-base sm:text-lg lg:text-xl leading-[1.7] whitespace-pre-line break-words" style={{ color: "oklch(0.32 0.08 20)" }}>
                   {config.letterText}
                 </div>
-                <div className="mt-8 flex items-center justify-end gap-3">
+                <div className="mt-7 sm:mt-8 flex items-center justify-end gap-3">
                   <span className="h-px w-16 bg-current opacity-30 parchment-ink" />
-                  <p className="font-script text-3xl parchment-ink">always yours</p>
+                  <p className="font-script text-2xl sm:text-3xl parchment-ink">always yours</p>
                 </div>
               </article>
             </div>
 
             {/* Photo collage */}
-            <div className="relative h-[28rem] sm:h-[34rem] animate-fade-up" style={{ animationDelay: "0.3s" }}>
+            <div className="relative h-[24rem] sm:h-[30rem] lg:h-[34rem] animate-fade-up" style={{ animationDelay: "0.3s" }}>
               {/* Center glow */}
               <div className="absolute inset-1/4 rounded-full opacity-40 blur-3xl animate-glow-pulse" aria-hidden
                 style={{ background: "radial-gradient(circle, oklch(0.82 0.14 75 / 0.5), transparent 70%)" }} />
               {photos.map((p, i) => (
                 <div
                   key={i}
-                  className="absolute h-44 w-36 sm:h-56 sm:w-48 rounded-xl bg-cream p-2.5 shadow-deep ring-1 ring-accent/30 transition-all duration-500 hover:scale-110 hover:rotate-0 hover:z-10 animate-float-soft"
+                  className="absolute h-36 w-28 sm:h-52 sm:w-44 lg:h-56 lg:w-48 rounded-xl bg-cream p-2 sm:p-2.5 shadow-deep ring-1 ring-accent/30 transition-all duration-500 hover:scale-110 hover:rotate-0 hover:z-10 animate-float-soft"
                   style={{
                     top: p.top,
                     left: p.left,
