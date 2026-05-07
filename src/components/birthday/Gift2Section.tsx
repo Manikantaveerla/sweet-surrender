@@ -3,16 +3,17 @@ import { ChevronRight, Heart } from "lucide-react";
 import { config } from "@/lib/birthday-config";
 import { SectionShell } from "./SectionShell";
 import { Ornament, PremiumButton } from "./Ornament";
-import m1 from "@/assets/memory-1.jpg";
-import m2 from "@/assets/memory-2.jpg";
-import m3 from "@/assets/memory-3.jpg";
-import m4 from "@/assets/memory-4.jpg";
+import placeholder1 from "@/assets/memory-2.jpg";
+import placeholder2 from "@/assets/memory-3.jpg";
+
+const m1 = "/videos/Picsart_26-04-17_19-33-00-409.jpg.jpeg";
+const m2 = "/videos/Blue and Gold Modern Birthday Instagram Post_20260426_214246_0000.png";
 
 const photos = [
-  { src: m1, rotate: -6, top: "5%", left: "2%" },
-  { src: m3, rotate: 5, top: "0%", right: "4%" },
-  { src: m2, rotate: -4, bottom: "8%", left: "6%" },
-  { src: m4, rotate: 7, bottom: "3%", right: "2%" },
+  { src: m1, rotate: -8, top: "2%", left: "4%" },
+  { src: placeholder1, rotate: 6, top: "10%", right: "6%" },
+  { src: placeholder2, rotate: -5, bottom: "10%", left: "8%" },
+  { src: m2, rotate: 9, bottom: "4%", right: "4%" },
 ];
 
 export function Gift2Section({ onNext }: { onNext: () => void }) {
