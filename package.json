@@ -8,7 +8,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "NITRO_PRESET=vercel vite build",
+    "build": "vite build",
+    "build:vercel": "NITRO_PRESET=vercel vite build",
+    "build:netlify": "NITRO_PRESET=netlify vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
