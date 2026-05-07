@@ -83,7 +83,7 @@ export function Gift2Section({ onNext }: { onNext: () => void }) {
             <div className="relative animate-bloom">
               <div className="absolute -inset-6 rounded-[2.5rem] opacity-50 blur-3xl animate-glow-pulse" aria-hidden
                 style={{ background: "radial-gradient(circle, oklch(0.82 0.14 75 / 0.55), transparent 70%)" }} />
-              <article className="relative rounded-[1.75rem] p-6 sm:p-10 lg:p-12 text-left parchment animate-letter-unseal overflow-hidden" style={{ animationDelay: "0.1s" }}>
+              <article className="relative rounded-[1.75rem] p-6 sm:p-10 lg:p-12 text-left parchment overflow-hidden">
                 <div className="hidden sm:block absolute top-5 right-6 font-script text-2xl parchment-muted">
                   to {config.shortName}
                 </div>
