@@ -6,8 +6,8 @@ import { Ornament, PremiumButton } from "./Ornament";
 import placeholder1 from "@/assets/memory-2.jpg";
 import placeholder2 from "@/assets/memory-3.jpg";
 
-const m1 = "/videos/Picsart_26-04-17_19-33-00-409.jpg.jpeg";
-const m2 = "/videos/Blue and Gold Modern Birthday Instagram Post_20260426_214246_0000.png";
+const m1 = "/videos/picsart-photo.jpg";
+const m2 = "/videos/birthday-post.png";
 
 const photos = [
   { src: m1, rotate: -8, top: "2%", left: "4%" },

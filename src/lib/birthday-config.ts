@@ -9,7 +9,7 @@ export const config = {
   passcode: "1614",
 
   // Welcome screen
-  welcomeHeading: "A surprise made by Manikanta  only for you",
+  welcomeHeading: "A surprise made by Manikanta only for you",
   welcomeSubtitle: "Type the four little numbers that mean the most to us. Something soft and sparkling is waiting on the other side.",
 
   // Birthday wish
@@ -46,7 +46,13 @@ Yours, Manikanta veerla always.`,
   finaleClosing: "Made with love. For you. Always.",
 
   // Final gallery videos (replace URLs)
-  finalVideos: [] as { url: string; caption: string }[],
+  finalVideos: [
+    { url: "/videos/Viju lu 1 [7732085] (1).mp4", caption: "Our first steps together" },
+    { url: "/videos/viju lu 2 💗🎁 [62A518B] (1).mp4", caption: "Sweet moments on loop" },
+    { url: "/videos/Viju lu 🎁 2 [AD9D996] (1).mp4", caption: "The big surprise" },
+    { url: "/videos/New Project. [0F76755].mp4", caption: "A little magic for you" },
+    { url: "/videos/birthday-story.mp4", caption: "Your birthday story" },
+  ] as { url: string; caption: string }[],
 
   // Extra notes shown in the finale
   loveNotes: [
