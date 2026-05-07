@@ -16,10 +16,10 @@ export function WishSection({ onNext }: { onNext: () => void }) {
         <div className="animate-fade-up">
           <Ornament label="today is all yours" />
         </div>
-        <h2 className="mt-4 font-display text-[2.5rem] sm:text-[5rem] lg:text-[6.5rem] leading-[0.95] text-foreground animate-fade-up tracking-tight" style={{ animationDelay: "0.1s" }}>
+        <h2 className="mt-4 font-display text-[2.25rem] sm:text-[5rem] lg:text-[6.5rem] leading-[0.95] text-foreground animate-fade-up tracking-tight" style={{ animationDelay: "0.1s" }}>
           {config.birthdayHeadline.split(",")[0]},
           <br />
-          <span className="text-shimmer italic font-light">
+          <span className="text-shimmer italic font-light text-[2rem] sm:text-[4rem] lg:text-[6.5rem]">
             {config.birthdayHeadline.split(",").slice(1).join(",").trim()}
           </span>
         </h2>

@@ -25,7 +25,7 @@ export function Gift2Section({ onNext }: { onNext: () => void }) {
         <div className="animate-fade-up">
           <Ornament label={config.gift2Title.toLowerCase()} />
         </div>
-        <h2 className="mt-4 font-display text-[2.5rem] sm:text-[5rem] lg:text-[6rem] text-foreground animate-fade-up tracking-tight" style={{ animationDelay: "0.1s" }}>
+        <h2 className="mt-4 font-display text-[2.25rem] sm:text-[5rem] lg:text-[6rem] text-foreground animate-fade-up tracking-tight" style={{ animationDelay: "0.1s" }}>
           <span className="text-shimmer italic font-light">{config.gift2Subtitle}</span>
         </h2>
 
@@ -101,7 +101,7 @@ export function Gift2Section({ onNext }: { onNext: () => void }) {
                   </div>
                   <span className="font-script text-xl">to {config.shortName}</span>
                 </div>
-                <p className="mt-2 sm:mt-8 font-script text-4xl sm:text-5xl parchment-ink leading-tight">Dearest you,</p>
+                <p className="mt-2 sm:mt-8 font-script text-3xl sm:text-5xl parchment-ink leading-tight">Dearest you,</p>
                 <div className="mt-5 sm:mt-6 font-display text-base sm:text-lg lg:text-xl leading-[1.7] whitespace-pre-line break-words" style={{ color: "oklch(0.32 0.08 20)" }}>
                   {config.letterText}
                 </div>
